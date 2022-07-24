@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    1
 
 Summary:    A C<try/catch/finally> syntax for perl
 License:    GPLv1+ or Artistic
@@ -19,6 +19,7 @@ BuildRequires: perl(Test::More) >= 0.880.0
 BuildRequires: perl(XS::Parse::Keyword) >= 0.60.0
 BuildRequires: perl(XS::Parse::Keyword::Builder) >= 0.60.0
 BuildRequires: perl-devel
+
 %description
 This module provides a syntax plugin that implements exception-handling
 semantics in a form familiar to users of other languages, being built on a
@@ -45,6 +46,6 @@ for perl code.
 ./Build install --destdir=%{buildroot}
 
 %files
-%doc Changes LICENSE META.json META.yml MYMETA.yml README
+%doc Changes LICENSE META.json META.yml README
 %{_mandir}/man3/*
 %perl_vendorarch/*

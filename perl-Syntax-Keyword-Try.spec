@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define upstream_name    Syntax-Keyword-Try
 %define upstream_version 0.27
 

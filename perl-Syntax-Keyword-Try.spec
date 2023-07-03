@@ -1,13 +1,13 @@
 %define _empty_manifest_terminate_build 0
 
 %define upstream_name    Syntax-Keyword-Try
-%define upstream_version 0.27
+%define upstream_version 0.28
 
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    1
 
 Summary:    A C<try/catch/finally> syntax for perl
 License:    GPLv1+ or Artistic

@@ -1,25 +1,22 @@
-%define _empty_manifest_terminate_build 0
-
 %define upstream_name    Syntax-Keyword-Try
-%define upstream_version 0.28
 
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Version:    0.30
 Release:    1
 
 Summary:    A C<try/catch/finally> syntax for perl
 License:    GPLv1+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/release/%{upstream_name}
-Source0:    https://www.cpan.org/modules/by-module/Syntax/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    https://www.cpan.org/modules/by-module/Syntax/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires: perl(ExtUtils::CBuilder)
-BuildRequires: perl(Module::Build) >= 0.400.400
-BuildRequires: perl(Test::More) >= 0.880.0
-BuildRequires: perl(XS::Parse::Keyword) >= 0.60.0
-BuildRequires: perl(XS::Parse::Keyword::Builder) >= 0.60.0
+BuildRequires: perl(Module::Build)
+BuildRequires: perl(Test::More)
+BuildRequires: perl(XS::Parse::Keyword)
+BuildRequires: perl(XS::Parse::Keyword::Builder)
 BuildRequires: perl-devel
 
 %description
@@ -34,7 +31,7 @@ parser plugins and manipulate optrees to provide new syntax and behaviours
 for perl code.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL --installdirs=vendor

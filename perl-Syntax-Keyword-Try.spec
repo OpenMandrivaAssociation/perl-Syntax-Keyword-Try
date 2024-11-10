@@ -17,6 +17,7 @@ BuildRequires: perl(Module::Build)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(XS::Parse::Keyword)
 BuildRequires: perl(XS::Parse::Keyword::Builder)
+BuildRequires: perl(File::ShareDir)
 BuildRequires: perl-devel
 
 %description
